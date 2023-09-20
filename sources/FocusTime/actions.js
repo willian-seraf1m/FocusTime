@@ -29,11 +29,11 @@ export function modes(classMode, audioArchive) {
   state.isMute = document.documentElement.classList.toggle(classMode)
 
   if(state.isMute) {
-  sounds[audioArchive + 'Audio'].play()
+  sounds[audioArchive].play()
   return
   }
 
-  sounds[audioArchive + 'Audio'].pause()
+  sounds[audioArchive].pause()
 }
 
 
