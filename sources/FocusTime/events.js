@@ -13,12 +13,13 @@ export function registerControls() {
   })
 
   controlsMode.addEventListener('click', (event) => {
-    const classMode = event.target.dataset.action
-    const audioArchive = event.target.dataset.action + "Audio"
-    if(classMode === undefined || audioArchive === undefined) {
+    const modeClassName = event.target.dataset.action
+    const audioArchiveName = event.target.dataset.action + "Audio"
+
+    if(modeClassName === undefined || audioArchiveName === undefined) {
       return
     }
 
-    actions.modes(classMode, audioArchive)
+    actions.modes(modeClassName, audioArchiveName)
   })
 }

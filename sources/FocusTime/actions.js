@@ -25,15 +25,15 @@ export function decreaseMinute() {
 
 
 /* modes */
-export function modes(classMode, audioArchive) {
-  state.isMute = document.documentElement.classList.toggle(classMode)
+export function modes(modeClassName, audioArchiveName) {
+  state.isMute = document.documentElement.classList.toggle(modeClassName)
 
   if(state.isMute) {
-  sounds[audioArchive].play()
+  sounds[audioArchiveName].play()
   return
   }
 
-  sounds[audioArchive].pause()
+  sounds[audioArchiveName].pause()
 }
 
 
