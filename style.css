@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+  --bg-card-mode: #e7e9e9;
+  --color-text: #323238;
+  --color-text-secondary: #fff;
+  
+  --forest-mode-color: #c3d0ac;
+  --rain-mode-color: #a3c4ce;
+  --coffe-mode-color: #b99576;
+  --fireplace-mode-color: #f4dba7;
+}
+
+body {
+  color: var(--color-text);
+  height: 100vh;
+  font-size: 1.6rem;
+  display: grid;
+  place-content: center;
+}
+
+.app {
+  display: flex;
+  gap: 19.2rem;
+  align-items: center;
+  padding: 4rem;
+}
+
+#focus-time {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.6rem;
+  display: flex;
+  justify-content: center;
+}
+ 
+
+.controls {
+  justify-content: center;
+  display: flex;
+  gap: 4rem;
+}
+
+.controls button {
+  border: none;
+  background: none;
+}
+
+.modes-controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+
+.modes-controls .card-mode {
+  background-color: var(--bg-card-mode);
+  padding: 4.8rem;
+  border-radius: 2.4rem;
+  text-align: center;
+  border: none;
+}
+
+.running .play,
+html:not(.running) .pause {
+  display: none;
+}
+
+html.forestMode .forest-mode {
+  background: var(--forest-mode-color);
+}
+
+html.rainMode .rain-mode {
+  background: var(--rain-mode-color);
+}
+
+html.coffeeShopMode .coffeeShop-mode {
+  background: var(--coffe-mode-color);
+}
+
+html.fireplaceMode .fireplace-mode {
+  background: var(--fireplace-mode-color);
+}
+
+
+@media(max-width: 970px) {
+  .app {
+    display: initial;
+  }
+  
+  .modes-controls {
+    margin-top: 2.6rem;
+  }
+}

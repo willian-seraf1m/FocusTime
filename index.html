@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Time Plus</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="module" src="./sources/main.js" defer></script>
+</head>
+
+<body>
+  <div class="app">
+
+    <div class="focus-time-content">
+      <div id="focus-time">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+
+      <div class="controls">
+        <button  
+        class="play">
+          <img src="./assets/controls/play.svg" alt="Botão Play" data-action="toggleRunning">
+        </button>
+
+        <button  
+        class="pause">
+          <img src="./assets/controls/pause-circle.svg" alt="Botão Play" data-action="toggleRunning">
+        </button>
+
+        <button 
+        class="reset">
+          <img src="./assets/controls/stop.svg" alt="Botão de Parar" data-action="reset">
+        </button>
+
+        <button 
+        class="increase-minute">
+          <img src="./assets/controls/+.svg" alt="Adicionar minutos" data-action="increaseMinute">
+        </button>
+
+        <button  
+        class="decrease-minute">
+          <img src="./assets/controls/minus.svg" alt="Diminuir minutos" data-action="decreaseMinute">
+        </button>
+      </div>
+    </div>
+
+    <div class="modes-controls">
+      <button 
+      data-action="forestMode" 
+      class="card-mode forest-mode">
+        <img src="./assets/modes/forest-icon.svg" alt="" data-action="forestMode" >
+      </button>
+
+      <button 
+      data-action="rainMode" 
+      class="card-mode rain-mode">
+        <img src="./assets/modes/rain-icon.svg" alt="" data-action="rainMode" >
+      </button>
+      
+      <button 
+      data-action="coffeeShopMode" 
+      class="card-mode coffeeShop-mode">
+        <img src="./assets/modes/coffeeshop-icon.svg" alt="" data-action="coffeeShopMode" >
+      </button>
+
+      <button 
+      data-action="fireplaceMode" 
+      class="card-mode fireplace-mode">
+        <img src="./assets/modes/fireplace-icon.svg" alt=""  data-action="fireplaceMode" >
+      </button>
+    </div>
+
+  </div>
+</body>
+
+</html>
