@@ -16,7 +16,7 @@ export function registerControls() {
     const modeClassName = event.target.dataset.action
     const audioArchiveName = event.target.dataset.action + "Audio"
 
-    if(modeClassName === undefined || audioArchiveName === undefined) {
+    if(!modeClassName || !audioArchiveName) {
       return
     }
 
